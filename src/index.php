@@ -27,6 +27,7 @@ $mqualification = $_POST["mqualification"];
 $moccupation = $_POST["moccupation"];
 $phone1 = $_POST["phone1"];
 $email1 = $_POST["email1"];
+$address = $_POST["address"];
 // checking empty condition
 if($_POST['submit'])
 {
