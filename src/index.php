@@ -175,14 +175,14 @@ if($_POST['submit'])
 <label for="gender">Gender</label>
 <p>
 
-<input type="radio" name="male" value="male" >
+<input type="radio" name="male" value="male" <?php if($_POST["male"] == 'male'){echo "checked";} ?>>
 
 
 
 <label for="male">Male</label>
 </p>
 <p>
-<input type="radio" name="male" value="female" > 
+<input type="radio" name="male"  value="female"  <?php if($_POST["male"] == 'female'){echo "checked";}?>> 
 
 
 <label for="male">Female</label>
