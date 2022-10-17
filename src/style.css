@@ -1,0 +1,26 @@
+.main
+{
+    display:flex;
+}
+.dates
+{
+    width: 28%;
+    height: 33px;
+}
+.dates1
+{
+    height:33px;
+}
+.dates2
+{
+    width: 28%;
+    height: 33px;
+}
+.email
+{
+    margin-left: 5px;
+}
+.error
+{
+    color:red;
+}
