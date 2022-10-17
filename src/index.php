@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-
+// taken values from form
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
 $fname1 = $_POST["fname1"];
@@ -27,6 +27,7 @@ $mqualification = $_POST["mqualification"];
 $moccupation = $_POST["moccupation"];
 $phone1 = $_POST["phone1"];
 $email1 = $_POST["email1"];
+// checking empty condition
 if($_POST['submit'])
 {
     if(empty($_POST["fname"]))
@@ -147,24 +148,25 @@ if($_POST['submit'])
       
 }
 ?>
+<!-- form start -->
     <div class="form1">
     <form action = "" method = "post"  class="form2">
  <h1>Student Registration Form</h1>
  <label for="nameofapplicant">Name of Applicant</label>
  <p>
- <input type ="text" name="fname"  placeholder="First" class="dates1">
+ <input type ="text" name="fname"  placeholder="First" class="dates1" value="<?php echo  $fname; ?>">
 
  <span class="error"><?php echo $first;?></span>
  <span class="error"><?php echo $nameerror;?></span>
 
- <input type="text" name="lname"  placeholder="Last" class="dates1">
+ <input type="text" name="lname"  placeholder="Last" class="dates1" value="<?php echo  $lname; ?>">
  <span class="error"><?php echo $second;?></span>
  <span class="error"><?php echo $nameerr;?></span>
 </p>
 <p>
     <label for="date">Date of Birth</label>
     <p>
-    <input type="date" name="date" class="dates">
+    <input type="date" name="date" class="dates" value="<?php echo $date;?>">
     <span class="error"><?php echo $third;?></span>
 
    
@@ -179,7 +181,7 @@ if($_POST['submit'])
 <label for="male">Male</label>
 </p>
 <p>
-<input type="radio" name="male" value="female"> 
+<input type="radio" name="male" value="female" > 
 
 
 <label for="male">Female</label>
@@ -201,11 +203,11 @@ if($_POST['submit'])
     <label for="fathersname">Fathers Name</label>
 </p>
 <p>
-    <input type="text" name="fname1" placeholder="first" class="dates1">
+    <input type="text" name="fname1" placeholder="first" class="dates1"  value="<?php echo $fname1;?>">
     <span class="error"><?php echo $fourteen;?></span>
     <span class="error"><?php echo $nameerror1;?></span>
   
-    <input type="text" name="lname1" placeholder="last" class="dates1">
+    <input type="text" name="lname1" placeholder="last" class="dates1" value="<?php echo $lname1;?>">
     <span class="error"><?php echo $fifteen;?></span>
     <span class="error"><?php echo $nameerr1;?></span>
 
@@ -215,7 +217,7 @@ if($_POST['submit'])
     <label for="fathersqualification">Fathers Qualification</label>
 </p>
 <p>
-<input type="text" name = "fqualification" class="dates2">
+<input type="text" name = "fqualification" class="dates2"  value="<?php echo $fqualification;?>">
 <span class="error"><?php echo $sixth;?></span>
 
 </p>
@@ -224,7 +226,7 @@ if($_POST['submit'])
         <p>
     <label for="Phone">Phone</label>
 </p>
-    <input type="text" name="phone" placeholder="#### ###" class="dates1">
+    <input type="text" name="phone" placeholder="#### ###" class="dates1"  value="<?php echo $phone;?>">
 
     <span class="error"><?php echo $ErrMsg;?></span>
   <span class ="error"><?php echo $seventh;?></span>
@@ -233,7 +235,7 @@ if($_POST['submit'])
     <p>
     <label for="Phone">Email</label>
 </p>
-    <input type="email" name="email" placeholder="" class="dates1">
+    <input type="email" name="email" placeholder="" class="dates1"  value="<?php echo $email;?>">
     <span class="error"><?php echo $eighth;?></span>
    
 </div>
@@ -242,7 +244,7 @@ if($_POST['submit'])
     <label for="fathersoccupation">Fathers Occupation</label>
 </p>
 <p>
-    <input type="text" name="occupation" class="dates2">
+    <input type="text" name="occupation" class="dates2"  value="<?php echo $occupation;?>">
     <span class="error"><?php echo $ten;?></span>
   
 </p>
@@ -253,11 +255,11 @@ if($_POST['submit'])
     <label for="fathersname">Mothers Name</label>
 </p>
 <p>
-    <input type="text" name="fname2" placeholder="first" class="dates1">
+    <input type="text" name="fname2" placeholder="first" class="dates1"  value="<?php echo $fname2;?>">
     <span class="error"><?php echo $sixteen;?></span>
     <span class="error"><?php echo $nameerror2;?></span>
    
-    <input type="text" name="lname2" placeholder="last" class="dates1">
+    <input type="text" name="lname2" placeholder="last" class="dates1"  value="<?php echo $lname2;?>">
     <span class="error"><?php echo $seventeen;?></span>
     <span class="error"><?php echo $nameerr2;?></span>
 
@@ -266,7 +268,7 @@ if($_POST['submit'])
     <label for="mothersqualification">Mothers Qualification</label>
 </p>
 <p>
-<input type="text" name = "mqualification" class="dates2">
+<input type="text" name = "mqualification" class="dates2"  value="<?php echo $mqualification;?>">
 <span class="error"><?php echo $eleven;?></span>
 
 </p>
@@ -276,7 +278,7 @@ if($_POST['submit'])
         <p>
     <label for="Phone">Phone</label>
 </p>
-    <input type="text" name="phone1" placeholder="#### ###" class="dates1">
+    <input type="text" name="phone1" placeholder="#### ###" class="dates1" value="<?php echo $phone1;?>">
    
     <span class="error"><?php echo $ErrMsg2;?></span>
     <span class ="error"><?php echo $eighteen;?></span>
@@ -285,7 +287,7 @@ if($_POST['submit'])
     <p>
     <label for="Phone">Email</label>
 </p>
-    <input type="email" name="email1" placeholder="" class="dates1">
+    <input type="email" name="email1" placeholder="" class="dates1"  value="<?php echo $email1;?>">
     <span class="error"><?php echo $nineteen;?></span>
 
 </div>
@@ -295,7 +297,7 @@ if($_POST['submit'])
     <label for="mothersoccupation">Mothers Occupation</label>
 </p>
 <p>
-    <input type="text" name="moccupation"  class="dates2">
+    <input type="text" name="moccupation"  class="dates2"  value="<?php echo $moccupation;?>">
     <span class ="error"><?php echo $twelve;?></span>
 
 </p>
@@ -303,7 +305,7 @@ if($_POST['submit'])
     <label for="address">Address</label>
 </p>
 <p>
-    <input type="text" name="address" placeholder="Street Address"  class="dates2">
+    <input type="text" name="address" placeholder="Street Address"  class="dates2"  value="<?php echo $address;?>">
     <span class="error"><?php echo $thirteen;?></span>
 
 </p>
@@ -311,6 +313,7 @@ if($_POST['submit'])
 
 
 </form>
+<!-- form end -->
 </div>
 </body>
 </html>
